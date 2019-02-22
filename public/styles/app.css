@@ -1,0 +1,48 @@
+aside {
+    min-height: calc(100vh - 56px);
+}
+
+.sidebar-sticky {
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+}
+
+.sidebar-sticky h2 {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.sidebar-sticky ul {
+    list-style: none;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+    .sidebar-sticky li {
+        margin: 1em 0;
+    }
+
+main {
+    padding-top: 1rem;
+    background-color: beige;
+    padding: 50px 200px;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#messages {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: solid 1px lightgray;
+    padding: 3px 10px;
+    font-size: 14px;
+    color: gray;
+}

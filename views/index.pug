@@ -1,0 +1,66 @@
+mixin toggler(target)
+    button.navbar-toggler(data-toggle="collapse", data-target=target)
+        span.navbar-toggler-icon
+
+<!DOCTYPE html>
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+        link(rel="stylesheet", href="/lib/bootstrap.min.css")
+        link(rel="stylesheet", href="/styles/app.css")
+
+        title Socket Tchat
+    body
+
+        header
+            nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+                a.navbar-brand(href="/") Node Tchat
+                +toggler('#navbarContent')
+                .collapse.navbar-collapse#navbarContent
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a.nav-link(href="/") Accueil du chat
+
+        div.container-fluid
+            .row#login
+                main.col-md-12(role="main") 
+                    h1 Connexion 
+                    p Veuillez vous connecter pour accéder au chat 
+                    a.btn.btn-primary#loginGoogle Google Sign-In 
+            .row.d-none#chat
+                aside.col-md-2.bg-secondary.text-light
+                    .sidebar-sticky
+                        h2 Channels
+                        ul#channelsList
+
+                main.col-md-8(role="main")
+                    h2 Vous êtes sur le channel
+                        | &nbsp;#
+                        span.channelTitle
+                    hr
+                    form#chat
+                        .form-group
+                            input#message.form-control(type="text", placeholder="Tapez votre message ici ...", autofocus)
+                    p
+                        span#typingNotification.badge.badge-light
+
+                    ul#messages.list-group.list-group-flush
+
+                aside.col-md-2.bg-light.text-dark
+                    .sidebar-sticky
+                        h2 Dans
+                            | &nbsp;#
+                            span.channelTitle
+                            | :
+                        ul#usersList
+
+    script(src="/lib/jquery.min.js")
+    script(src="/lib/bootstrap.min.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="//www.gstatic.com/firebasejs/5.8.4/firebase-app.js") 
+    script(src="//www.gstatic.com/firebasejs/5.8.4/firebase-auth.js")
+    script(src="/scripts/Client.js")
+    script(src="/scripts/app.js")
