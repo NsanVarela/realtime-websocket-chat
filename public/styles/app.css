@@ -1,3 +1,12 @@
+body {
+    color:white;
+    background-color:white;
+    background-image:url(https://blenderartists.org/uploads/default/original/3X/d/9/d9cd135c6ae12b25400cf55c4c3f7b93656b27cb.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    }
+
 aside {
     min-height: calc(100vh - 56px);
 }
@@ -27,16 +36,24 @@ aside {
 
 main {
     padding-top: 1rem;
-    background-color: beige;
-    padding: 50px 200px;
+    padding: 150px 200px;
 }
 
-.avatar {
-    vertical-align: middle;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+#login{
+    text-align: center;
 }
+
+.loginButton {
+    display: block;
+    margin-bottom: 5px!important;
+    width: 50%;
+    margin: auto;
+}
+
+#legals {
+    font-size: 10px
+}
+
 
 #messages {
     margin-bottom: 5px;
