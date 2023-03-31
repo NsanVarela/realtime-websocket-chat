@@ -7,7 +7,7 @@ const chalk = require('chalk')
  * Configuration de l'application
  */
 
-const PORT = process.env.PORT || 9000
+const PORT = process.env.PORT || 3000
 
 const app = express() // Crée l'application Express
 const server = http.Server(app) // Récupère l'objet Server de l’app Express
